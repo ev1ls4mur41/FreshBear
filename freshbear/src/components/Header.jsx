@@ -5,6 +5,7 @@ import profileIco from '../images/profileIco.svg';
 import aboutIco from '../images/aboutIco.svg';
 import cart from '../images/cart.svg'
 import productImg from '../images/product.png';
+import closeBtn from '../images/close.svg';
 
 const customStyles = {
     content: {
@@ -46,11 +47,12 @@ function Header() {
                     <nav>
                         <p><a className="navBtn" href="#">О нас <img className="navImg" src={aboutIco} alt="about"/></a>
                         </p>
-                        <p><a className="navBtn" href="#">Профиль<img className="navImg" src={profileIco} alt="profile"/></a>
+                        <p><a className="navBtn" href="#">Профиль<img className="navImg" src={profileIco}
+                                                                      alt="profile"/></a>
                         </p>
                         <p>
-                            <button className="navBtn" onClick={openModal}>Корзина<img className="navImg" src={cart}
-                                                                                           alt="cart"/></button>
+                            <button className="navBtn"  onClick={openModal}>Корзина<img className="navImg" src={cart}
+                                                                                       alt="cart"/></button>
                         </p>
                         <Modal
                             isOpen={modalIsOpen}
@@ -61,15 +63,23 @@ function Header() {
                         >
 
                             <div className="cartContainer">
+                                <button className="closeBtn" onClick={closeModal} type="submit"><img src={closeBtn} alt=""/></button>
                                 <h1 className="cartTitle">Корзина</h1>
                                 <section className="productSection">
                                     <img className="productImg" src={productImg} alt=""/>
                                     <p className="cartProd">Приправа для курицы</p>
                                     <p className="cartPrice">150₽</p>
                                 </section>
-                                <section className="totalPrice">
-
-                                </section>
+                                <div className="totalBack">
+                                    <section className="totalDelPrice">
+                                        <p className="delTitle">Доставка</p>
+                                        <p className="delPrice">150₽</p>
+                                    </section>
+                                    <section className="totalAllPrice">
+                                        <p className="totalTitle">Итого</p>
+                                        <p className="totalPrice">300₽</p>
+                                    </section>
+                                </div>
                             </div>
                         </Modal>
                     </nav>
