@@ -50,7 +50,6 @@ header {
 }
 
 
-
 .img {
     padding: 24px 0;
 }
@@ -70,7 +69,7 @@ header {
 .container {
     display: flex;
     flex-direction: row;
-    width:100%;
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -117,7 +116,7 @@ header {
     margin: 9px 0;
 }
 
-.price{
+.price {
     font-size: 34px;
 }
 
@@ -166,11 +165,25 @@ footer {
 
 /*MODAL*/
 
+
 .cartContainer {
     margin: 37px 122px;
 }
 
-.productSection{
+.closeBtn{
+    width: 14px;
+    height: 14px;
+    border: none;
+    margin-left: 793px;
+    background-color: #fff;
+    transition: transform .7s ease-in-out;
+}
+
+.closeBtn:hover{
+    transform: rotate(360deg);
+}
+
+.productSection {
     display: flex;
     flex-direction: row;
 }
@@ -189,14 +202,38 @@ footer {
     width: 101px;
 }
 
-.cartPrice{
+.cartPrice {
     margin-left: 317px;
 }
 
-.totalPrice{
+.totalBack {
     margin-top: 34px;
     background-color: #FFDBDB;
     width: 710px;
     height: 100px;
     border-radius: 18px;
+}
+
+.totalDelPrice {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 0 31px 11px;
+}
+
+.delPrice {
+    font-size: 14px;
+    margin-left: 546px;
+}
+
+.totalAllPrice {
+    padding: 0 0 17px 11px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.totalPrice {
+    font-size: 14px;
+    margin-left: 585px;
 }
