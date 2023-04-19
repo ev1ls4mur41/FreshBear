@@ -1,0 +1,9 @@
+{
+  "name": "freshbear",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/react-dom": "^18.0.11",
+    "react-modal": "^3.16.1"
+  }
+}
