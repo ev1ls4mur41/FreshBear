@@ -1,11 +1,13 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import Modal from 'react-modal';
 import logo from '../images/logo.svg';
 import profileIco from '../images/profileIco.svg';
 import aboutIco from '../images/aboutIco.svg';
 import cart from '../images/cart.svg'
-import productImg from '../images/product.png';
 import closeBtn from '../images/close.svg';
+import homeIco from '../images/homeIco.svg';
+import {Routes, Route, Link} from "react-router-dom";
+
 
 const customStyles = {
     content: {
@@ -42,51 +44,56 @@ function Header() {
     return (
         <div>
             <header className="header">
-                <div className="container">
-                    <a href="#"><img className="img" src={logo} alt="FRESH BEAR"/></a>
-                    <nav>
-                        <p><a className="navBtn" href="#">О нас <img className="navImg" src={aboutIco} alt="about"/></a>
-                        </p>
-                        <p><a className="navBtn" href="#">Профиль<img className="navImg" src={profileIco}
-                                                                      alt="profile"/></a>
-                        </p>
-                        <p>
-                            <button className="navBtn"  onClick={openModal}>Корзина<img className="navImg" src={cart}
+                <div className="hContainer">
+                    <div className="headerInner">
+                        <Link to="/"><img className="logo" src={logo} alt="FRESH BEAR"/></Link>
+                        <nav>
+                            <Link to="/" className="navBtn">Главная <img className="navImg" src={homeIco}
+                                                                         alt="home"/></Link>
+                            <Link to="/about" className="navBtn">О нас <img className="navImg" src={aboutIco}
+                                                                            alt="about"/></Link>
+                            <Link to="/login" className="navBtn">Профиль<img className="navImg" src={profileIco}
+                                                                               alt="profile"/></Link>
+                            <button className="navBtn" onClick={openModal}>Корзина<img className="navImg" src={cart}
                                                                                        alt="cart"/></button>
-                        </p>
-                        <Modal
-                            isOpen={modalIsOpen}
-                            onAfterOpen={afterOpenModal}
-                            onRequestClose={closeModal}
-                            style={customStyles}
-                            contentLabel="Example Modal"
-                        >
+                            <Modal
+                                isOpen={modalIsOpen}
+                                onAfterOpen={afterOpenModal}
+                                onRequestClose={closeModal}
+                                style={customStyles}
+                                contentLabel="Example Modal"
+                            >
 
-                            <div className="cartContainer">
-                                <button className="closeBtn" onClick={closeModal} type="submit"><img src={closeBtn} alt=""/></button>
-                                <h1 className="cartTitle">Корзина</h1>
-                                <section className="productSection">
-                                    <img className="productImg" src={productImg} alt=""/>
-                                    <p className="cartProd">Приправа для курицы</p>
-                                    <p className="cartPrice">150₽</p>
-                                </section>
-                                <div className="totalBack">
-                                    <section className="totalDelPrice">
-                                        <p className="delTitle">Доставка</p>
-                                        <p className="delPrice">150₽</p>
-                                    </section>
-                                    <section className="totalAllPrice">
-                                        <p className="totalTitle">Итого</p>
-                                        <p className="totalPrice">300₽</p>
-                                    </section>
+                                <div className="cartContainer">
+                                    <button className="closeBtn" onClick={closeModal} type="submit"><img src={closeBtn}
+                                                                                                         alt=""/>
+                                    </button>
+                                    <h1 className="cartTitle">Корзина</h1>
+                                    <p>Ваша корзина пуста</p>
+                                    {/*<section className="productSection">*/}
+                                    {/*    <img className="productImg" src={Spice} alt=""/>*/}
+                                    {/*    <p className="cartProd">Приправа для курицы</p>*/}
+                                    {/*    <p className="cartPrice">150₽</p>*/}
+                                    {/*</section>*/}
+                                    {/*<div className="totalBack">*/}
+                                    {/*    <section className="totalDelPrice">*/}
+                                    {/*        <p className="delTitle">Доставка</p>*/}
+                                    {/*        <p className="delPrice">150₽</p>*/}
+                                    {/*    </section>*/}
+                                    {/*    <section className="totalAllPrice">*/}
+                                    {/*        <p className="totalTitle">Итого</p>*/}
+                                    {/*        <p className="totalPrice">300₽</p>*/}
+                                    {/*    </section>*/}
+                                    {/*</div>*/}
                                 </div>
-                            </div>
-                        </Modal>
-                    </nav>
+                            </Modal>
+                        </nav>
+                    </div>
                 </div>
             </header>
         </div>
     )
 }
+
 
 export default Header;

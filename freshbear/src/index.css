@@ -1,132 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&family=Montserrat:wght@400;700&display=swap');
 
-*,
-*::after,
-*::before {
+* {
     padding: 0;
     margin: 0;
 }
 
 
-@font-face {
-    font-family: "Igra Sans";
+body {
+    font-family: 'Montserrat', sans-serif;
+
 }
 
-body {
-    font-family: "Igra Sans";
+.container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    margin: auto;
+    padding-bottom: 2.5rem;
+}
+
+.fContainer {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    margin: auto;
+}
+
+.hContainer {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    margin: auto;
 }
 
 /*HEADER*/
-nav {
+
+header {
+    background-color: #AACD3E;
     display: flex;
     flex-direction: row;
-    margin: auto 0 auto 753px;
-    float: right;
+    filter: drop-shadow(1px  2px 4px #BFBFBF);
+
 }
 
-.navImg:hover {
-    color: #CB492B;
-    transition: 0.5s;
+nav{
+    margin: 20px 0 0  693px;
 }
 
+
+.headerInner{
+    display: flex;
+}
 
 .navBtn {
+    margin-left: 15px;
     color: black;
     text-decoration: none;
     border: none;
     background-color: #AACD3E;
     font-size: 16px;
-    font-family: "Igra Sans";
-    margin-left: 20px;
+    justify-content: space-between;
+
 }
+
+
+.navBtn{
+    margin-right: 0;
+}
+
+
 
 .navBtn:hover {
-    transition: 0.5s;
-    border-bottom: #CB492B 1px solid;
-}
-
-header {
-    background-color: #AACD3E;
-    display: flex;
-}
-
-
-.img {
-    padding: 24px 0;
-}
-
-.navImg {
-    position: relative;
-}
-
-.navImg:hover {
-    color: #CB492B;
+    color: #cb492b;
     transition: 0.5s;
 }
+
+
+.logo {
+    padding: 15px 0;
+}
+
+
+
 
 
 /*MAIN*/
 
-.container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
 
 .main {
     margin-top: 44px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    height: 850px;
 }
 
 
 /* PRODUCT */
 
-.product {
+.prodRow {
+    margin-top: 50px;
+    flex-direction: row;
+}
+
+.prodRow:first-child {
+    margin-top: 0;
+}
+
+.leftSide {
+    float: left;
+}
+
+.rightSide {
+    float: right;
+    max-width: 50%;
+    margin-left: 264px;
+}
+
+.Prod {
+    display: flex;
+    flex-direction: row;
+    max-width: 588px;
+    height: 301px;
+}
+
+.prodDesc {
+    padding: 0 0 0 21px;
     display: flex;
     flex-direction: column;
+}
+
+.prodImg {
     width: 223px;
-    height: 164px;
-    padding-left: 20px;
+    height: 301px;
 }
 
-.addBtn {
-    position: relative;
-    float: right;
-    font-family: "Igra Sans";
-    background-color: #AACD3E;
-    width: 101px;
-    height: 35px;
-    border-radius: 18px;
+.prodTitle {
+    background: none;
     border: none;
-    padding: 10px;
-    bottom: 35px;
-    margin-left: auto;
+    padding: 0;
+    font-size: 32px;
+    font-weight: bold;
 }
 
-
-.infoProd {
+.prodSub {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #969696;
-    margin: 9px 0;
+    font-size: 21px;
+    font-weight: 200;
+    color: #767676;
+    margin-bottom: auto;
+}
+
+.lPrice {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #767676;
+
 }
 
 .price {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 34px;
 }
 
-.priceTitle {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
-    color: #969696;
-    margin: 0;
+.inCart {
+    width: 136px;
+    height: 45px;
+    background-color: #AACD3E;
+    border: none;
+    font-size: 21px;
+    padding: 7px 9px;
+    border-radius: 50px;
+    float: right;
+    -webkit-transition: top 1s ease-out 0.5s;
+    -moz-transition: top 1s ease-out 0.5s;
+    -o-transition: top 1s ease-out 0.5s;
+    transition: top 1s ease-out 0.5s;
 }
+
+.inCart:hover {
+    color: white;
+    background-color: #cb492b;
+    transition: all 0.5s ease;
+
+}
+
+.priceBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* ABOUT */
+
+.about{
+    background-image: url("images/bcLogo.svg");
+    background-size: 709px 629px;
+    background-repeat: no-repeat;
+    padding-bottom: 346.49px;
+    background-position: center;
+    left: 1000px;
+}
+
+
+.background {
+    background-image: url("images/bcLogo.svg");
+    background-size: 709px 629px;
+    background-repeat: no-repeat;
+    padding-bottom: 346.49px;
+    background-position: center;
+    left: 1000px;
+}
+
+
+
+.abTitle{
+    margin:76px 0 7px 0 ;
+    font-size: 64px;
+}
+
+.abSub{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.bot{
+    margin-bottom: 324px;
+}
+
+
+
+/* PROFILE */
+
+.profile{
+    display: flex;
+}
+
+.profTitle{
+    margin: 33px 0 55px ;
+}
+
+.profileIcon{
+    margin: 0;
+    padding: 0;
+    width: 27px;
+    height: 27px;
+}
+
+.picSect{
+    flex-direction: column;
+}
+
+.profPic{
+    width: 178px;
+    height: 178px;
+}
+
+.profInfo{
+    margin: 29px 0 0 50px;
+    line-height: 40px;
+}
+
+.profLeftSide{
+    float: left;
+    font-weight: bold;
+}
+
+.profBtns{
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.profNo{
+    font-weight: normal;
+}
+
+.adress{
+    padding: 8px 22px;
+    border:none;
+    border-radius: 50px;
+    background-color: #F6F6F6;
+    color: #CB492B;
+    margin-left: 110px;
+    margin-bottom: 38px;
+    filter: drop-shadow(1px  2px 4px #BFBFBF);
+}
+
+.history{
+    padding: 8px 19px;
+    margin-bottom: 38px;
+    border:none;
+    border-radius: 50px;
+    background-color: #F6F6F6;
+    color: #CB492B;
+    filter: drop-shadow(1px  2px 4px #BFBFBF);
+}
+
+.profRightSide{
+    float: right;
+    margin-left: 82px;
+    margin-bottom: 279px;
+}
+
+.Map{
+    margin-top: 75px;
+    margin-left: 95px;
+}
+
+.mapMain{
+
+    width: 710px;
+    height: 365px;
+}
+
 
 /*FOOTER*/
 
@@ -157,9 +344,7 @@ footer {
 }
 
 .footerLogo {
-
     margin-left: 1278px;
-
 }
 
 
@@ -170,7 +355,7 @@ footer {
     margin: 37px 122px;
 }
 
-.closeBtn{
+.closeBtn {
     width: 14px;
     height: 14px;
     border: none;
@@ -179,7 +364,7 @@ footer {
     transition: transform .7s ease-in-out;
 }
 
-.closeBtn:hover{
+.closeBtn:hover {
     transform: rotate(360deg);
 }
 
@@ -236,4 +421,72 @@ footer {
 .totalPrice {
     font-size: 14px;
     margin-left: 585px;
+}
+
+
+
+/* LOGIN */
+.loginPage{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logTitle{
+    margin-top: 24px ;
+    font-size: 46px;
+}
+
+.loginForm{
+        margin: 148.7px 500px ;
+}
+
+.inputT{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.loginName{
+    width: 469px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.loginPass{
+    width: 469px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+.loginBtn{
+    font-weight: bold;
+    font-size: 36px;
+    padding: 14px 85px;
+    margin: 41px 75px;
+    border-radius: 85px;
+    border: none;
+    background-color: #AACD3E;
+}
+
+.logInLink{
+    text-decoration: none;
+    color: black;
+    transition: background-color 100s ease-in-out;
+}
+
+.loginBtn:hover{
+    color: #fff;
+    background-color: #cb492b;
+
+
+}
+
+/* @MEDIA */
+
+@media all and (max-width: 320px){
+    .container{
+    max-width: 259px;
+}
 }
